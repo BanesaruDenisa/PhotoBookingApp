@@ -25,17 +25,18 @@ public class StatisticsService {
     }
 
     public Statistics createOrUpdateStatistics(Statistics stats) {
-        // Caută dacă există deja ceva pentru userul respectiv
+
         Optional<Statistics> existing = statisticsRepository.findByUserId(stats.getUser().getId());
 
         if (existing.isPresent()) {
             Statistics existingStats = existing.get();
-            // actualizezi valorile
+
+
             existingStats.setTotalBookings(stats.getTotalBookings());
             existingStats.setEstimatedEarnings(stats.getEstimatedEarnings());
             return statisticsRepository.save(existingStats);
         } else {
-            // nu există, creezi o intrare nouă
+
             return statisticsRepository.save(stats);
         }
     }

@@ -21,7 +21,8 @@ public class ReviewService {
                         review.getId(),
                         review.getRating(),
                         review.getComment(),
-                        review.getBooking().getId() // Asigură-te că `getBooking()` nu este null
+                        review.getBooking().getId()
+
                 ))
                 .collect(Collectors.toList());
     }

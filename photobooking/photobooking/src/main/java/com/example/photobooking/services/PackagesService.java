@@ -30,7 +30,8 @@ public class PackagesService {
     }
 
     public Packages createPack(Packages Packages) {
-        // Validăm dacă pack-ul este nou
+
+
         if (Packages.getId() != null && packageRepository.existsById(Packages.getId())) {
             throw new IllegalArgumentException("Pack with this ID already exists");
         }
@@ -38,7 +39,7 @@ public class PackagesService {
     }
 
     public Packages updateServicePackage(Long id, Packages updatedPackages) {
-        //checkAdminRole(); // Doar admin poate edita pachete
+
         return packageRepository.findById(id)
                 .map(existingPack -> {
                     existingPack.setName(updatedPackages.getName());

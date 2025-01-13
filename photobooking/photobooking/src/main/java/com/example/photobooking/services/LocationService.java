@@ -34,13 +34,12 @@ public class LocationService {
     }
 
     public Location createLocationIfNotExists(String name) {
-        // Verifică dacă există deja
+
         Location existing = findByName(name);
         if (existing != null) {
             return existing;
         }
 
-        // dacă nu, creăm altul minimal
         Location newLoc = new Location();
         newLoc.setName(name);
         newLoc.setDescription("Auto-created location");
