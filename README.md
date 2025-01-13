@@ -1,0 +1,1 @@
+PhotoBookingApp este o aplicație web dedicată pentru gestionarea rezervărilor de servicii foto-video. Aceasta permite utilizatorilor să își programeze ședințe foto și să colaboreze cu fotografi profesioniști, oferind un sistem de administrare eficient și funcționalități pentru organizare.
